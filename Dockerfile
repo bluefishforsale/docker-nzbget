@@ -10,6 +10,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # (stable-download or testing-download)
 ARG NZBGET_BRANCH="stable-download"
 
+
 # install packages
 RUN \
  apk add --no-cache \
@@ -40,12 +41,14 @@ RUN \
 	-e "s#\(ConfigTemplate=\).*#\1$\{AppDir\}/webui/nzbget.conf.template#g" \
  /defaults/nzbget.conf && \
 
+
 # cleanup
  rm -rf \
 	/tmp/*
 
 # add local files
 COPY root/ /
+COPY scripts/ /app/nzbget/scripts/
 
 # ports and volumes
 VOLUME /config /downloads
