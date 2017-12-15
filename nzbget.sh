@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 SERVICE="nzbget"
-#IMAGE="linuxserver/nzbget"
 IMAGE="bluefishforsale/nzbget"
 VERSION="latest"
 LOCALDIR="/data01/services/${SERVICE}"
