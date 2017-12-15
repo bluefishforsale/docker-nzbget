@@ -8,8 +8,6 @@ LOCALDIR="/data01/services/${SERVICE}"
 WORKDIR="/M2scratch/${SERVICE}"
 DOWNLOADS="/data01/incoming"
 
-test  -d ${LOCALDIR}  || mkdir -p ${LOCALDIR}
-
 docker stop ${SERVICE}
 docker rm ${SERVICE}
 
