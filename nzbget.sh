@@ -18,7 +18,7 @@ sudo docker run -d \
   --name=${SERVICE} \
   --hostname=${HOSTNAME} \
   -e PUID=1001 -e PGID=100\
-  -p 6789:6789 \
+  -p 8901:8901 \
   -v ${LOCALDIR}:/config \
   -v ${WORKDIR}:/scratch \
   -v ${MOVIES}:/movies \
